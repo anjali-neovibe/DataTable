@@ -1,0 +1,67 @@
+[
+  {
+    "id" : 1,
+    "sal" : "Ms",
+    "fname" : "Anjali",
+    "lname" : "Raj",
+    "email" : "anjali@gmail.com",
+    "gender" : "Female",
+    "number" : 7025577728,
+    "country" : "India",
+    "state" : "Kerala",
+    "city" : "Kayamkulam",
+    "date" : "2021-10-10"
+  },
+  {
+    "id" : 2,
+    "sal" : "Mr",
+    "fname" : "Sethu",
+    "lname" : "Raj",
+    "email" : "sethu@gmail.com",
+    "gender" : "Male",
+    "number" : 6275436667,
+    "country" : "India",
+    "state" : "Kerala",
+    "city" : "Kayamkulam",
+    "date" : "2015-10-07"
+  },
+  {
+    "id" : 3,
+    "sal" : "Ms",
+    "fname" : "Navya",
+    "lname" : "Moncy",
+    "email" : "navya@gmail.com",
+    "gender" : "Female",
+    "number" : 9625764648,
+    "country" : "India",
+    "state" : "Kerala",
+    "city" : "Trivandrum",
+    "date" : "2019-06-03"
+  },
+  {
+    "id" : 4,
+    "sal" : "Mrs",
+    "fname" : "Shilpa",
+    "lname" : "Raj",
+    "email" : "shilpa@gmail.com",
+    "gender" : "Female",
+    "number" : 555555555,
+    "country" : "India",
+    "state" : "Kerala",
+    "city" : "Ernakulam",
+    "date" : "2016-07-15"
+  },
+  {
+    "id" : 5,
+    "sal" : "Mrs",
+    "fname" : "Hasna",
+    "lname" : "Salim",
+    "email" : "husna@gmail.com",
+    "gender" : "Female",
+    "number" : 9357426589,
+    "country" : "India",
+    "state" : "Kerala",
+    "city" : "Adoor",
+    "date" : "2018-11-04"
+  }
+]

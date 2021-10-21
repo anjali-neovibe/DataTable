@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css" integrity="sha512-zzq8ZrbhP7DGbwClbqSYuo+di3FvAlMNykCKWE6pHuqmCgGjJSISDTzy7QkdI2ajLlgw0nx6hxIu8os2hYuN8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="section get-help">
+    <div class="container">
+      <h3 class="section-heading">USER DATA TABLE</h3>
+      <h5>WELCOME...!</h5>
+      <p class="section-description">Here is the User Data Table... You can Add new user, Edit user data and Delete user datas.</p>
+      <input type="submit" value="Add New User" id="myBtn" class="button button-primary">
+
+
+      <!-- POP UP -->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>USER ENTRY</h2>
+          </div>
+          <form class="form">
+            <div class="modal-body">
+              <input type="text" id="newid" maxlength="6" placeholder="Enter ID" required>
+
+              <table class="newUser">
+                <tr>
+                  <td>
+                    <select id="newsal">
+                    <option value="Mr">Mr</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mrs">Mrs</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" id="newfname" placeholder="Enter First Name" required>
+                  </td>
+                  <td>
+                    <input type="text" id="newlname" placeholder="Enter Last Name" required>
+                  </td>
+                  <td>
+                    <input type="text" id="newemail" placeholder="Enter Email ID" required>
+                  </td>                 
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="text" id="newnum" placeholder="Enter Phone number" required>
+                  </td>
+                  <td>
+                    <label for="countries">Country
+                    <select id="countries" onchange="countryChange()" required>
+                      <option value="">-select-</option>
+                    </select>
+                    </label>
+                  </td>
+                  <td>
+                    <label for="state">State
+                    <select id="state" required>
+                      <option value="">-select-</option>
+                    </select>
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" id = "city" placeholder="Enter City" required>
+                  </td>                 
+                </tr>
+
+                <tr>
+                  <td></td>                 
+                  <td>
+                    <input type="radio" name="gender" value="Male" id="gender">Male
+                    <input type="radio" name="gender" value="Female" id="gender">Female
+                  </td>                  
+                  <td>
+                    <label for="birthday">Date Added:</label>
+                    <input type="date" id="newdate" name="birthday" required><br>
+                  </td>
+                </tr>
+              </table>
+
+              <input type="button" id="addButton" value="Add User" class="button button-primary" onclick="add()">
+              <input type="button" id="editButton" value="Update User" class="button button-primary" onclick="edit()">
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- Table Top -->
+      <div class="table-top">
+        <div>
+          <label>Show entries
+            <select>
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>Sort
+            <select id="selectBox" onchange="sortTable()">
+              <option id="asc" value="2">First Name (asc)</option>
+              <option id="desc" value="2">First Name (desc)</option>
+              <option id="asc" value="10">Date (asc)</option>
+              <option id="desc" value="10">Date (desc)</option>
+            </select>
+          </label> 
+        </div>
+
+        <!-- Search -->
+        <input type="text" placeholder="Search Name" id="myInput" onkeyup="searchFilter()">
+      </div>
+      
+
+      <!-- Table -->
+      <table class="u-full-width" id = "myTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Salutation</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Mob no</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Date Added</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+  <!-- email -->
+  <!-- pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" -->
+  
+</body>
+</html>
